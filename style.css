@@ -1,0 +1,144 @@
+/* font-family: 'Kumbh Sans', sans-serif; */
+
+:root {
+  /* - Font size (name and stats): 18px */
+  --color-dark-cyan: hsl(185, 75%, 39%);
+  --color-dark-blue: hsl(229, 23%, 23%);
+  --color-dark-gray-blue: hsl(227, 10%, 46%);
+  --color-dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-dark-cyan);
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.8rem;
+  color: var(--color-dark-blue);
+  overflow: hidden;
+}
+
+.picture--top {
+  position: absolute;
+  z-index: 1;
+  top: -65%;
+  left: -15%;
+}
+
+.picture--bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: -80%;
+  right: -10%;
+}
+
+.card {
+  box-shadow: 0 10px 20px hsl(229, 23%, 23%, 0.5);
+  width: 35rem;
+  border-radius: 20px;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 1fr 1fr 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  height: 40rem;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pic {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  width: 100%;
+  background-image: url(images/bg-pattern-card.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px 20px 0 0;
+}
+
+.heading--box,
+.picture {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.heading--box {
+  height: max-content;
+  transform: translateY(7rem);
+  width: 140%;
+  text-align: center;
+}
+
+.heading--main {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.line {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  border-bottom: 0.1px solid hsl(0, 0%, 59%, 0.3);
+  width: 100%;
+}
+
+.heading--text,
+span,
+.description {
+  color: var(--color-dark-gray);
+  font-weight: 400;
+}
+
+.heading--text {
+  font-size: 1.5rem;
+}
+
+.item {
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+}
+
+span {
+  margin-left: 0.5rem;
+}
+
+.picture {
+  transform: translateY(-50%);
+  border-radius: 50%;
+  outline: none;
+  border: 5px solid white;
+}
+
+.list {
+  width: 90%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
